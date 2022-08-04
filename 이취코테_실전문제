@@ -1,0 +1,15 @@
+#실전문제 2 큰수의 법칙
+n,m,k = map(int,input().split())
+data = sorted(list(map(int, input().split())))
+print(data)
+ans = 0
+while m > 0:
+  num = data.pop(-1)
+  if m >= k:
+    ans += num * k
+    m -= k
+  else: 
+    ans += num * m
+    m = 0
+print (ans)
+# k 가  m보다 엄청 작으면 두개 이상 봐야 하는것 아닌가?
